@@ -1,4 +1,4 @@
-# ORM
+# VUEX-ORM-init
 
 > My gnarly Nuxt.js project
 
