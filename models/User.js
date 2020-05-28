@@ -9,4 +9,19 @@ export default class User extends Model {
       name: this.string('')
     }
   }
+
+  static apiConfig = {
+    actions: {
+
+      fetch () {
+        return this.get('https://jsonplaceholder.typicode.com/users')
+      },
+
+      fetchById (id) {
+        return this.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+      },
+
+    }
+  }
+
 }

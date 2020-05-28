@@ -7,13 +7,14 @@
 <script>
 import User from '@/models/User'
 export default {
+
+
   created() {
-    User.insert({data: {id: 1, name: 'Shai'}})
-    User.insert({data: {id: 2, name: 'Maya'}})
+    User.api().fetch()
   },
 
-  computed:{
-    users(){
+  computed: {
+    users() {
       return User.all()
     }
   }
